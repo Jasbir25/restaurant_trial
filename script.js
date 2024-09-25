@@ -364,7 +364,7 @@ function toggleCategoryList() {
     const isShowing = list.classList.contains('show');
     
     if (isShowing) {
-        list.style.transform = 'translateY(20px)';
+        list.style.transform = 'translateY(15px)';
         list.style.opacity = '0';
         overlay.classList.remove('show');
         button.style.transform = 'rotate(0deg)';
