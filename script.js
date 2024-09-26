@@ -307,10 +307,6 @@ function updateOrders() {
                 ${order.items.map(item => `<li>${item.name} x${item.quantity} - ₹${(item.price * item.quantity).toFixed(2)}</li>`).join('')}
             </ul>
             <p>Subtotal: ₹${order.subtotal.toFixed(2)}</p>
-            <p>Service Charge (5%): ₹${order.serviceCharge.toFixed(2)}</p>
-            <p>CGST (2.5%): ₹${order.cgst.toFixed(2)}</p>
-            <p>SGST (2.5%): ₹${order.sgst.toFixed(2)}</p>
-            <p><strong>Order Total: ₹${order.total.toFixed(2)}</strong></p>
         `;
         orderList.appendChild(orderElement);
         subtotal += order.subtotal;
