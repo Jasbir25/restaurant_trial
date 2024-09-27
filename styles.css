@@ -1,0 +1,420 @@
+/* Add this at the top of your CSS file
+body {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+} */
+
+/* You can also create utility classes for different weights if needed */
+
+:root {
+    --primary-color: #A7C7E7; /* Light pastel blue */
+    --secondary-color: #6A5ACD; /* Slate blue */
+    --accent-color: #87CEFA; /* Light sky blue */
+    --text-color: #4682B4; /* Steel blue */
+    --background-color: #F0F8FF; /* Alice blue - very light blue */
+    --hover-color: #B0E0E6; /* Powder blue */
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+/* Rest of your existing CSS styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Comfortaa", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: white;
+    padding: 1.5rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #4682B4;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#category-nav, #user-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+#category-nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#category-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#category-nav a:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+button {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background-color: #4cacaf;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.center-align {
+    text-align: center;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dish-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.dish-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.dish-price {
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.menu-item h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.menu-item p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.menu-item button {
+    margin-top: auto;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    max-width: 500px; /* Limit the width of the modal */
+    width: 90%; /* Take up 90% of the screen width on smaller screens */
+    margin: 2rem auto; /* Center the modal and add some top/bottom margin */
+}
+
+.close {
+    color: var(--text-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--secondary-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+    animation: fadeInOut 3s ease-in-out;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+}
+
+.notification-success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.notification-warning {
+    background-color: #ff9800;
+    color: white;
+}
+
+.notification-error {
+    background-color: #f44336;
+    color: white;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quantity-btn {
+    background-color: #4682B4;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.quantity {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item .quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item .quantity-btn {
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+.cart-item .quantity {
+    margin: 0 5px;
+    font-size: 14px;
+}
+
+#category-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#category-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+#category-nav a:hover {
+    color: #4CAF50;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+#floating-menu {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1001;
+}
+
+#floating-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#floating-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#category-list {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 90px;
+    right: 0;
+    min-width: 200px;
+    transition: transform 0.3s, opacity 0.3s;
+    transform: translateY(15px);
+    opacity: 0;
+}
+
+#category-list.show {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#category-list li {
+    padding: 0;
+}
+
+#category-list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 18px;
+}
+
+#category-list a:hover {
+    background-color: #f0f0f0;
+    color: #4CAF50;
+}
+
+.order-summary {
+    margin-top: 1rem;
+    border-top: 2px solid var(--accent-color);
+    padding-top: 1rem;
+}
+
+.order-summary p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+}
+
+.order-summary p strong {
+    margin-left: auto;
+}
+
+.order-summary p:last-child {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#overlay.show {
+    opacity: 1;
+}
+
+/* Add media query for smaller screens */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .dish-image {
+        height: 150px;
+    }
+}
