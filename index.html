@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Menu SPA</title>
+    <title>Subbu Da Dhaba</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Add these lines for the Comfortaa font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="overlay"></div>
     <header>
-        <h1 class="center-align">Restaurant Name</h1>
+        <h1 class="center-align">Subbu Da Dhaba</h1>
         <nav id="main-nav">
             <div id="category-nav">
                 <!-- Category links will be dynamically added here -->
@@ -78,6 +82,20 @@
             </div>
             <span class="cart-item-price">₹<span class="price-value"></span></span>
         </li>
+    </template>
+
+    <!-- New template for menu items with images -->
+    <template id="menu-item-template">
+        <div class="menu-item">
+            <img class="dish-image" src="" alt="Dish Image">
+            <h3 class="dish-name"></h3>
+            <p class="dish-price"></p>
+            <div class="quantity-controls">
+                <button class="quantity-btn minus" data-action="decrease">-</button>
+                <span class="quantity">0</span>
+                <button class="quantity-btn plus" data-action="increase">+</button>
+            </div>
+        </div>
     </template>
 
     <script src="script.js"></script>
