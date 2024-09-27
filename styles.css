@@ -1,24 +1,70 @@
-/* Add this at the top of your CSS file */
+/* Add this at the top of your CSS file
+body {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+} */
+
+/* You can also create utility classes for different weights if needed */
+
+:root {
+    --primary-color: #A7C7E7; /* Light pastel blue */
+    --secondary-color: #6A5ACD; /* Slate blue */
+    --accent-color: #87CEFA; /* Light sky blue */
+    --text-color: #4682B4; /* Steel blue */
+    --background-color: #F0F8FF; /* Alice blue - very light blue */
+    --hover-color: #B0E0E6; /* Powder blue */
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+/* Rest of your existing CSS styles */
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Comfortaa", sans-serif;
     margin: 0;
     padding: 0;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 header {
-    background-color: #f2f2f2;
-    padding: 1rem;
+    background-color: white;
+    padding: 1.5rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #4682B4;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 4rem;
 }
 
 #main-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
 #category-nav, #user-nav {
@@ -26,17 +72,42 @@ header {
     gap: 1rem;
 }
 
+#category-nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#category-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#category-nav a:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
 button {
     cursor: pointer;
     padding: 0.5rem 1rem;
-    background-color: #4CAF50;
+    background-color: #4cacaf;
     color: white;
     border: none;
     border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: var(--hover-color);
+}
+
+button:active {
+    transform: scale(0.98);
 }
 
 .center-align {
@@ -56,17 +127,48 @@ button:hover {
     padding: 15px;
     text-align: center;
     background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dish-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.dish-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.dish-price {
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
 }
 
 .menu-item h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.menu-item p {
     margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .menu-item button {
-    margin-top: 10px;
+    margin-top: auto;
 }
 
 .modal {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     display: none;
     position: fixed;
     z-index: 1;
@@ -79,25 +181,25 @@ button:hover {
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    max-width: 500px; /* Limit the width of the modal */
+    width: 90%; /* Take up 90% of the screen width on smaller screens */
+    margin: 2rem auto; /* Center the modal and add some top/bottom margin */
 }
 
 .close {
-    color: #aaa;
+    color: var(--text-color);
     float: right;
     font-size: 28px;
     font-weight: bold;
-    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
-    color: #000;
+    color: var(--secondary-color);
     text-decoration: none;
     cursor: pointer;
 }
@@ -111,6 +213,10 @@ button:hover {
     display: none;
     z-index: 1000;
     animation: fadeInOut 3s ease-in-out;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 1.5rem;
+    font-weight: 600;
 }
 
 .notification-success {
@@ -143,7 +249,7 @@ button:hover {
 }
 
 .quantity-btn {
-    background-color: #4CAF50;
+    background-color: #4682B4;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -207,24 +313,17 @@ section {
 }
 
 #floating-button {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    font-size: 32px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s, transform 0.3s, rotate 0.3s;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #floating-button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 #category-list {
@@ -233,13 +332,12 @@ section {
     padding: 0;
     margin: 0;
     background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    overflow: hidden;
     position: absolute;
     bottom: 90px;
     right: 0;
     min-width: 200px;
-    overflow: hidden;
     transition: transform 0.3s, opacity 0.3s;
     transform: translateY(15px);
     opacity: 0;
@@ -260,8 +358,8 @@ section {
     color: #333;
     font-weight: bold;
     display: block;
-    padding: 15px 25px;
-    transition: background-color 0.3s;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
     font-size: 18px;
 }
 
@@ -271,15 +369,15 @@ section {
 }
 
 .order-summary {
-    margin-top: 20px;
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
+    margin-top: 1rem;
+    border-top: 2px solid var(--accent-color);
+    padding-top: 1rem;
 }
 
 .order-summary p {
-    margin: 5px 0;
     display: flex;
     justify-content: space-between;
+    margin: 0.5rem 0;
 }
 
 .order-summary p strong {
@@ -308,4 +406,15 @@ section {
 
 #overlay.show {
     opacity: 1;
+}
+
+/* Add media query for smaller screens */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .dish-image {
+        height: 150px;
+    }
 }
