@@ -1,24 +1,34 @@
 const categories = ['Today\'s Specials', 'Starters', 'Main Course', 'Beverages', 'Dessert'];
 const menuItems = {
     'Today\'s Specials': [
-        { name: 'Chef\'s Special Pasta', price: 499, quantity: 0 },
-        { name: 'Soup of the Day', price: 199, quantity: 0 },
-    ],
-    'Starters': [
-        { name: 'Garlic Bread', price: 149, quantity: 0 },
-        { name: 'Bruschetta', price: 199, quantity: 0 },
+        { name: 'Chef\'s Special Pasta', price: 499, quantity: 0, image: 'images/chefs-special-pasta.jpg' },
+        { name: 'Soup of the Day', price: 199, quantity: 0, image: 'images/soup-of-the-day.jpg' },
+        { name: 'Grilled Chicken Chops', price: 799, quantity: 0, image: 'images/grilled-lamb-chops.jpg' },
+        { name: 'Stuffed Bell Peppers', price: 349, quantity: 0, image: 'images/stuffed-bell-peppers.jpg' }
+        ],
+        'Starters': [
+        { name: 'Garlic Bread', price: 149, quantity: 0, image: 'images/garlic-bread.jpg' },
+        { name: 'Bruschetta', price: 199, quantity: 0, image: 'images/bruschetta.jpg' },
+        { name: 'Fried Calamari', price: 299, quantity: 0, image: 'images/fried-calamari.jpg' },
+        { name: 'Stuffed Mushrooms', price: 249, quantity: 0, image: 'images/stuffed-mushrooms.jpg' }
     ],
     'Main Course': [
-        { name: 'Grilled Salmon', price: 699, quantity: 0 },
-        { name: 'Chicken Parmesan', price: 599, quantity: 0 },
-    ],
-    'Beverages': [
-        { name: 'Soda', price: 99, quantity: 0 },
-        { name: 'Iced Tea', price: 129, quantity: 0 },
+        { name: 'Grilled Salmon', price: 699, quantity: 0, image: 'images/grilled-salmon.jpg' },
+        { name: 'Chicken Parmesan', price: 599, quantity: 0, image: 'images/chicken-parmesan.jpg' },
+        { name: 'Chicken Tenderloin', price: 899, quantity: 0, image: 'images/beef-tenderloin.jpg' },
+        { name: 'Vegetarian Lasagna', price: 499, quantity: 0, image: 'images/vegetarian-lasagna.jpg' }
+        ],
+        'Beverages': [
+        { name: 'Soda', price: 99, quantity: 0, image: 'images/soda.jpg' },
+        { name: 'Iced Tea', price: 129, quantity: 0, image: 'images/iced-tea.jpg' },
+        { name: 'Lemonade', price: 139, quantity: 0, image: 'images/lemonade.jpg' },
+        { name: 'Cold Coffee', price: 179, quantity: 0, image: 'images/cold-coffee.jpg' }
     ],
     'Dessert': [
-        { name: 'Chocolate Cake', price: 249, quantity: 0 },
-        { name: 'Ice Cream', price: 179, quantity: 0 },
+        { name: 'Chocolate Cake', price: 249, quantity: 0, image: 'images/chocolate-cake.jpg' },
+        { name: 'Ice Cream', price: 179, quantity: 0, image: 'images/ice-cream.jpg' },
+        { name: 'Tiramisu', price: 299, quantity: 0, image: 'images/tiramisu.jpg' },
+        { name: 'Apple Pie', price: 229, quantity: 0, image: 'images/apple-pie.jpg' }
     ],
 };
 
@@ -131,6 +141,7 @@ function showMenuItems(category, container) {
         const itemElement = document.createElement('div');
         itemElement.className = 'menu-item';
         itemElement.innerHTML = `
+            <img src="${item.image}" alt="${item.name}" class="dish-image">
             <h3>${item.name}</h3>
             <p>${formatPrice(item.price)}</p>
             ${item.quantity === 0 ? 
