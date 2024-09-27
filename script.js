@@ -1,35 +1,36 @@
 const categories = ['Today\'s Specials', 'Starters', 'Main Course', 'Beverages', 'Dessert'];
 const menuItems = {
     'Today\'s Specials': [
-        { name: 'Chef\'s Special Pasta', price: 499, quantity: 0, image: 'images/chefs-special-pasta.jpg' },
-        { name: 'Soup of the Day', price: 199, quantity: 0, image: 'images/soup-of-the-day.jpg' },
-        { name: 'Grilled Chicken Chops', price: 799, quantity: 0, image: 'images/grilled-lamb-chops.jpg' },
-        { name: 'Stuffed Bell Peppers', price: 349, quantity: 0, image: 'images/stuffed-bell-peppers.jpg' }
-        ],
-        'Starters': [
-        { name: 'Garlic Bread', price: 149, quantity: 0, image: 'images/garlic-bread.jpg' },
-        { name: 'Bruschetta', price: 199, quantity: 0, image: 'images/bruschetta.jpg' },
-        { name: 'Fried Calamari', price: 299, quantity: 0, image: 'images/fried-calamari.jpg' },
-        { name: 'Stuffed Mushrooms', price: 249, quantity: 0, image: 'images/stuffed-mushrooms.jpg' }
-    ],
-    'Main Course': [
-        { name: 'Grilled Salmon', price: 699, quantity: 0, image: 'images/grilled-salmon.jpg' },
-        { name: 'Chicken Parmesan', price: 599, quantity: 0, image: 'images/chicken-parmesan.jpg' },
-        { name: 'Chicken Tenderloin', price: 899, quantity: 0, image: 'images/beef-tenderloin.jpg' },
-        { name: 'Vegetarian Lasagna', price: 499, quantity: 0, image: 'images/vegetarian-lasagna.jpg' }
-        ],
-        'Beverages': [
-        { name: 'Soda', price: 99, quantity: 0, image: 'images/soda.jpg' },
-        { name: 'Iced Tea', price: 129, quantity: 0, image: 'images/iced-tea.jpg' },
-        { name: 'Lemonade', price: 139, quantity: 0, image: 'images/lemonade.jpg' },
-        { name: 'Cold Coffee', price: 179, quantity: 0, image: 'images/cold-coffee.jpg' }
-    ],
-    'Dessert': [
-        { name: 'Chocolate Cake', price: 249, quantity: 0, image: 'images/chocolate-cake.jpg' },
-        { name: 'Ice Cream', price: 179, quantity: 0, image: 'images/ice-cream.jpg' },
-        { name: 'Tiramisu', price: 299, quantity: 0, image: 'images/tiramisu.jpg' },
-        { name: 'Apple Pie', price: 229, quantity: 0, image: 'images/apple-pie.jpg' }
-    ],
+    { name: 'Chef\'s Special Pasta', price: 499, quantity: 0, image: 'images/chefs-special-pasta.jpg', description: 'Handmade pasta with a secret sauce' },
+    { name: 'Soup of the Day', price: 199, quantity: 0, image: 'images/soup-of-the-day.jpg', description: 'Fresh, seasonal ingredients in a hearty broth' },
+    { name: 'Grilled Chicken Chops', price: 799, quantity: 0, image: 'images/grilled-lamb-chops.jpg', description: 'Juicy grilled chicken with aromatic herbs' },
+    { name: 'Stuffed Bell Peppers', price: 349, quantity: 0, image: 'images/stuffed-bell-peppers.jpg', description: 'Bell peppers stuffed with a flavorful vegetable medley' }
+],
+'Starters': [
+    { name: 'Garlic Bread', price: 149, quantity: 0, image: 'images/garlic-bread.jpg', description: 'Crispy garlic bread with a buttery finish' },
+    { name: 'Bruschetta', price: 199, quantity: 0, image: 'images/bruschetta.jpg', description: 'Toasted bread topped with fresh tomatoes and basil' },
+    { name: 'Fried Calamari', price: 299, quantity: 0, image: 'images/fried-calamari.jpg', description: 'Lightly breaded calamari with a zesty dipping sauce' },
+    { name: 'Stuffed Mushrooms', price: 249, quantity: 0, image: 'images/stuffed-mushrooms.jpg', description: 'Savory mushrooms stuffed with a creamy cheese filling' }
+],
+'Main Course': [
+    { name: 'Grilled Salmon', price: 699, quantity: 0, image: 'images/grilled-salmon.jpg', description: 'Perfectly grilled salmon served with a lemon butter sauce' },
+    { name: 'Chicken Parmesan', price: 599, quantity: 0, image: 'images/chicken-parmesan.jpg', description: 'Breaded chicken topped with marinara and melted cheese' },
+    { name: 'Chicken Tenderloin', price: 899, quantity: 0, image: 'images/beef-tenderloin.jpg', description: 'Tender grilled chicken with a savory garlic glaze' },
+    { name: 'Vegetarian Lasagna', price: 499, quantity: 0, image: 'images/vegetarian-lasagna.jpg', description: 'Layered lasagna with fresh vegetables and cheese' }
+],
+'Beverages': [
+    { name: 'Soda', price: 99, quantity: 0, image: 'images/soda.jpg', description: 'Refreshing carbonated beverage of your choice' },
+    { name: 'Iced Tea', price: 129, quantity: 0, image: 'images/iced-tea.jpg', description: 'Chilled tea brewed with fresh lemon and herbs' },
+    { name: 'Lemonade', price: 139, quantity: 0, image: 'images/lemonade.jpg', description: 'Classic lemonade made with freshly squeezed lemons' },
+    { name: 'Cold Coffee', price: 179, quantity: 0, image: 'images/cold-coffee.jpg', description: 'Iced coffee brewed to perfection with a smooth finish' }
+],
+'Dessert': [
+    { name: 'Chocolate Cake', price: 249, quantity: 0, image: 'images/chocolate-cake.jpg', description: 'Rich chocolate cake with a velvety ganache' },
+    { name: 'Ice Cream', price: 179, quantity: 0, image: 'images/ice-cream.jpg', description: 'Creamy ice cream in a variety of flavors' },
+    { name: 'Tiramisu', price: 299, quantity: 0, image: 'images/tiramisu.jpg', description: 'Classic Italian dessert layered with coffee-soaked biscuits' },
+    { name: 'Apple Pie', price: 229, quantity: 0, image: 'images/apple-pie.jpg', description: 'Warm apple pie with a cinnamon sugar crust' }
+]
+,
 };
 
 let orders = [];
@@ -143,7 +144,8 @@ function showMenuItems(category, container) {
         itemElement.innerHTML = `
             <img src="${item.image}" alt="${item.name}" class="dish-image">
             <h3>${item.name}</h3>
-            <p>${formatPrice(item.price)}</p>
+            <p class="dish-description">${item.description}</p>
+            <p class="dish-price">${formatPrice(item.price)}</p>
             ${item.quantity === 0 ? 
                 `<button class="add-to-cart" data-name="${item.name}" data-price="${item.price}">Add to Cart</button>` :
                 getQuantityControlsHTML(item.quantity)
