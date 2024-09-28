@@ -19,7 +19,6 @@
     font-weight: 700;
 }
 
-/* Rest of your existing CSS styles */
 html {
     scroll-behavior: smooth;
 }
@@ -164,7 +163,7 @@ button:active {
 }
 
 .modal {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
     display: none;
     position: fixed;
     z-index: 1;
@@ -181,9 +180,9 @@ button:active {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     padding: 2rem;
-    max-width: 500px; /* Limit the width of the modal */
-    width: 90%; /* Take up 90% of the screen width on smaller screens */
-    margin: 2rem auto; /* Center the modal and add some top/bottom margin */
+    max-width: 500px;
+    width: 90%;
+    margin: 2rem auto;
 }
 
 .close {
@@ -403,8 +402,6 @@ section {
 #overlay.show {
     opacity: 1;
 }
-
-/* Add media query for smaller screens */
 @media (max-width: 768px) {
     .menu-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -413,4 +410,35 @@ section {
     .dish-image {
         height: 150px;
     }
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.filter-btn {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-btn.active {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
+
+.menu-item.hidden {
+    display: none;
 }
