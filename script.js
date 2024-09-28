@@ -22,7 +22,7 @@ const menuItems = {
     { name: 'Soda', price: 99, quantity: 0, image: 'images/soda.jpg', description: 'Refreshing carbonated beverage of your choice', veg: true },
     { name: 'Iced Tea', price: 129, quantity: 0, image: 'images/iced-tea.jpg', description: 'Chilled tea brewed with fresh lemon and herbs', veg: true },
     { name: 'Lemonade', price: 139, quantity: 0, image: 'images/lemonade.jpg', description: 'Classic lemonade made with freshly squeezed lemons', veg: true },
-    { name: 'Cold Coffee', price: 179, quantity: 0, image: 'images/cold-coffee.jpg', description: 'Iced coffee brewed to perfection with a smooth finish', veg: false }
+    { name: 'Cold Coffee', price: 179, quantity: 0, image: 'images/cold-coffee.jpg', description: 'Iced coffee brewed to perfection with a smooth finish', veg: true }
 ],
 'Dessert': [
     { name: 'Chocolate Cake', price: 249, quantity: 0, image: 'images/chocolate-cake.jpg', description: 'Rich chocolate cake with a velvety ganache', veg: true },
