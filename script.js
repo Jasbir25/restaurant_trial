@@ -1,39 +1,40 @@
 const categories = ['Today\'s Specials', 'Starters', 'Main Course', 'Beverages', 'Dessert'];
 const menuItems = {
     'Today\'s Specials': [
-    { name: 'Chef\'s Special Pasta', price: 499, quantity: 0, image: 'images/chefs-special-pasta.jpg', description: 'Handmade pasta with a secret sauce' },
-    { name: 'Soup of the Day', price: 199, quantity: 0, image: 'images/soup-of-the-day.jpg', description: 'Fresh, seasonal ingredients in a hearty broth' },
-    { name: 'Grilled Chicken Chops', price: 799, quantity: 0, image: 'images/grilled-lamb-chops.jpg', description: 'Juicy grilled chicken with aromatic herbs' },
-    { name: 'Stuffed Bell Peppers', price: 349, quantity: 0, image: 'images/stuffed-bell-peppers.jpg', description: 'Bell peppers stuffed with a flavorful vegetable medley' }
+    { name: 'Chef\'s Special Pasta', price: 499, quantity: 0, image: 'images/chefs-special-pasta.jpg', description: 'Handmade pasta with a secret sauce', veg: true },
+    { name: 'Soup of the Day', price: 199, quantity: 0, image: 'images/soup-of-the-day.jpg', description: 'Fresh, seasonal ingredients in a hearty broth', veg: true },
+    { name: 'Grilled Chicken Chops', price: 799, quantity: 0, image: 'images/grilled-lamb-chops.jpg', description: 'Juicy grilled chicken with aromatic herbs', veg: false },
+    { name: 'Stuffed Bell Peppers', price: 349, quantity: 0, image: 'images/stuffed-bell-peppers.jpg', description: 'Bell peppers stuffed with a flavorful vegetable medley', veg: true }
 ],
 'Starters': [
-    { name: 'Garlic Bread', price: 149, quantity: 0, image: 'images/garlic-bread.jpg', description: 'Crispy garlic bread with a buttery finish' },
-    { name: 'Bruschetta', price: 199, quantity: 0, image: 'images/bruschetta.jpg', description: 'Toasted bread topped with fresh tomatoes and basil' },
-    { name: 'Fried Calamari', price: 299, quantity: 0, image: 'images/fried-calamari.jpg', description: 'Lightly breaded calamari with a zesty dipping sauce' },
-    { name: 'Stuffed Mushrooms', price: 249, quantity: 0, image: 'images/stuffed-mushrooms.jpg', description: 'Savory mushrooms stuffed with a creamy cheese filling' }
+    { name: 'Garlic Bread', price: 149, quantity: 0, image: 'images/garlic-bread.jpg', description: 'Crispy garlic bread with a buttery finish', veg: true },
+    { name: 'Bruschetta', price: 199, quantity: 0, image: 'images/bruschetta.jpg', description: 'Toasted bread topped with fresh tomatoes and basil', veg: true },
+    { name: 'Fried Calamari', price: 299, quantity: 0, image: 'images/fried-calamari.jpg', description: 'Lightly breaded calamari with a zesty dipping sauce', veg: false },
+    { name: 'Stuffed Mushrooms', price: 249, quantity: 0, image: 'images/stuffed-mushrooms.jpg', description: 'Savory mushrooms stuffed with a creamy cheese filling', veg: true }
 ],
 'Main Course': [
-    { name: 'Grilled Salmon', price: 699, quantity: 0, image: 'images/grilled-salmon.jpg', description: 'Perfectly grilled salmon served with a lemon butter sauce' },
-    { name: 'Chicken Parmesan', price: 599, quantity: 0, image: 'images/chicken-parmesan.jpg', description: 'Breaded chicken topped with marinara and melted cheese' },
-    { name: 'Chicken Tenderloin', price: 899, quantity: 0, image: 'images/beef-tenderloin.jpg', description: 'Tender grilled chicken with a savory garlic glaze' },
-    { name: 'Vegetarian Lasagna', price: 499, quantity: 0, image: 'images/vegetarian-lasagna.jpg', description: 'Layered lasagna with fresh vegetables and cheese' }
+    { name: 'Grilled Salmon', price: 699, quantity: 0, image: 'images/grilled-salmon.jpg', description: 'Perfectly grilled salmon served with a lemon butter sauce', veg: false },
+    { name: 'Chicken Parmesan', price: 599, quantity: 0, image: 'images/chicken-parmesan.jpg', description: 'Breaded chicken topped with marinara and melted cheese', veg: false },
+    { name: 'Chicken Tenderloin', price: 899, quantity: 0, image: 'images/beef-tenderloin.jpg', description: 'Tender grilled chicken with a savory garlic glaze', veg: false },
+    { name: 'Vegetarian Lasagna', price: 499, quantity: 0, image: 'images/vegetarian-lasagna.jpg', description: 'Layered lasagna with fresh vegetables and cheese', veg: true }
 ],
 'Beverages': [
-    { name: 'Soda', price: 99, quantity: 0, image: 'images/soda.jpg', description: 'Refreshing carbonated beverage of your choice' },
-    { name: 'Iced Tea', price: 129, quantity: 0, image: 'images/iced-tea.jpg', description: 'Chilled tea brewed with fresh lemon and herbs' },
-    { name: 'Lemonade', price: 139, quantity: 0, image: 'images/lemonade.jpg', description: 'Classic lemonade made with freshly squeezed lemons' },
-    { name: 'Cold Coffee', price: 179, quantity: 0, image: 'images/cold-coffee.jpg', description: 'Iced coffee brewed to perfection with a smooth finish' }
+    { name: 'Soda', price: 99, quantity: 0, image: 'images/soda.jpg', description: 'Refreshing carbonated beverage of your choice', veg: true },
+    { name: 'Iced Tea', price: 129, quantity: 0, image: 'images/iced-tea.jpg', description: 'Chilled tea brewed with fresh lemon and herbs', veg: true },
+    { name: 'Lemonade', price: 139, quantity: 0, image: 'images/lemonade.jpg', description: 'Classic lemonade made with freshly squeezed lemons', veg: true },
+    { name: 'Cold Coffee', price: 179, quantity: 0, image: 'images/cold-coffee.jpg', description: 'Iced coffee brewed to perfection with a smooth finish', veg: false }
 ],
 'Dessert': [
-    { name: 'Chocolate Cake', price: 249, quantity: 0, image: 'images/chocolate-cake.jpg', description: 'Rich chocolate cake with a velvety ganache' },
-    { name: 'Ice Cream', price: 179, quantity: 0, image: 'images/ice-cream.jpg', description: 'Creamy ice cream in a variety of flavors' },
-    { name: 'Tiramisu', price: 299, quantity: 0, image: 'images/tiramisu.jpg', description: 'Classic Italian dessert layered with coffee-soaked biscuits' },
-    { name: 'Apple Pie', price: 229, quantity: 0, image: 'images/apple-pie.jpg', description: 'Warm apple pie with a cinnamon sugar crust' }
+    { name: 'Chocolate Cake', price: 249, quantity: 0, image: 'images/chocolate-cake.jpg', description: 'Rich chocolate cake with a velvety ganache', veg: true },
+    { name: 'Ice Cream', price: 179, quantity: 0, image: 'images/ice-cream.jpg', description: 'Creamy ice cream in a variety of flavors', veg: true },
+    { name: 'Tiramisu', price: 299, quantity: 0, image: 'images/tiramisu.jpg', description: 'Classic Italian dessert layered with coffee-soaked biscuits', veg: true },
+    { name: 'Apple Pie', price: 229, quantity: 0, image: 'images/apple-pie.jpg', description: 'Warm apple pie with a cinnamon sugar crust', veg: true }
 ]
 ,
 };
 
 let orders = [];
+let currentFilter = 'all';
 
 function initializeApp() {
     createCategoryList();
@@ -42,7 +43,6 @@ function initializeApp() {
     document.getElementById('cart-button').addEventListener('click', () => toggleModal('cart-modal'));
     document.getElementById('orders-button').addEventListener('click', () => toggleModal('orders-modal'));
 
-    // Add event listeners for closing modals
     document.querySelectorAll('.close').forEach(closeBtn => {
         closeBtn.addEventListener('click', (e) => {
             const modal = e.target.closest('.modal');
@@ -52,20 +52,21 @@ function initializeApp() {
         });
     });
 
-    // Close modals when clicking outside of them
     window.addEventListener('click', (event) => {
         if (event.target.classList.contains('modal')) {
             event.target.style.display = 'none';
         }
     });
 
-    // Add event listener for cart item quantity changes
     document.getElementById('cart-items').addEventListener('click', handleCartItemClick);
 
-    // Add event listener for floating button
     document.getElementById('floating-button').addEventListener('click', toggleCategoryList);
 
     setupOverlayListeners();
+
+    document.getElementById('all-filter-btn').addEventListener('click', () => handleFilter('all'));
+    document.getElementById('veg-filter-btn').addEventListener('click', () => handleFilter('veg'));
+    document.getElementById('non-veg-filter-btn').addEventListener('click', () => handleFilter('non-veg'));
 }
 
 function createCategoryList() {
@@ -80,7 +81,7 @@ function createCategoryList() {
             e.preventDefault();
             const targetElement = document.getElementById(targetId);
             smoothScroll(targetElement);
-            toggleCategoryList(); // Close the category list after clicking
+            toggleCategoryList();
         });
         li.appendChild(link);
         list.appendChild(li);
@@ -89,10 +90,8 @@ function createCategoryList() {
 
 function smoothScroll(targetElement) {
     if ('scrollBehavior' in document.documentElement.style) {
-        // If the browser supports smooth scrolling, use it
         targetElement.scrollIntoView({ behavior: 'smooth' });
     } else {
-        // For browsers that don't support smooth scrolling
         const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
         const startPosition = window.pageYOffset;
         const distance = targetPosition - startPosition;
@@ -110,7 +109,6 @@ function smoothScroll(targetElement) {
     }
 }
 
-// Easing function for smooth scrolling
 function easeInOutCubic(t, b, c, d) {
     t /= d/2;
     if (t < 1) return c/2*t*t*t + b;
@@ -133,25 +131,29 @@ function loadAllContent() {
         showMenuItems(category, section.querySelector('.menu-grid'));
     });
 
-    // Add event listeners to all buttons
     content.addEventListener('click', handleMenuItemClick);
 }
 
 function showMenuItems(category, container) {
     menuItems[category].forEach(item => {
-        const itemElement = document.createElement('div');
-        itemElement.className = 'menu-item';
-        itemElement.innerHTML = `
-            <img src="${item.image}" alt="${item.name}" class="dish-image">
-            <h3>${item.name}</h3>
-            <p class="dish-description">${item.description}</p>
-            <p class="dish-price">${formatPrice(item.price)}</p>
-            ${item.quantity === 0 ? 
-                `<button class="add-to-cart" data-name="${item.name}" data-price="${item.price}">Add to Cart</button>` :
-                getQuantityControlsHTML(item.quantity)
-            }
-        `;
-        container.appendChild(itemElement);
+        if (currentFilter === 'all' || 
+            (currentFilter === 'veg' && item.veg) || 
+            (currentFilter === 'non-veg' && !item.veg)) {
+            const itemElement = document.createElement('div');
+            itemElement.className = 'menu-item';
+            itemElement.innerHTML = `
+                <img src="${item.image}" alt="${item.name}" class="dish-image">
+                <h3>${item.name}</h3>
+                <p class="dish-description">${item.description}</p>
+                <p class="dish-price">${formatPrice(item.price)}</p>
+                <p>${item.veg ? '🥬 Veg' : '🍖 Non-Veg'}</p>
+                ${item.quantity === 0 ? 
+                    `<button class="add-to-cart" data-name="${item.name}" data-price="${item.price}">Add to Cart</button>` :
+                    getQuantityControlsHTML(item.quantity)
+                }
+            `;
+            container.appendChild(itemElement);
+        }
     });
 }
 
@@ -185,7 +187,7 @@ function addToCart(name, price) {
         item.quantity = 1;
         updateCart();
         showNotification(`${name} has been added to your cart.`, 'success');
-        loadAllContent(); // Refresh all menu items
+        loadAllContent();
     }
 }
 
@@ -198,7 +200,7 @@ function updateCartItemQuantity(name, action) {
             item.quantity = Math.max(0, item.quantity - 1);
         }
         updateCart();
-        loadAllContent(); // Refresh all menu items
+        loadAllContent();
     }
 }
 
@@ -256,7 +258,7 @@ function handleCartItemClick(event) {
         const cartItem = target.closest('.cart-item');
         const name = cartItem.querySelector('.cart-item-name').textContent;
         updateCartItemQuantity(name, action);
-        updateCart(); // Update the cart after changing quantity
+        updateCart();
     }
 }
 
@@ -269,7 +271,7 @@ function placeOrder() {
             if (item.quantity > 0) {
                 orderItems.push({ ...item });
                 subtotal += item.price * item.quantity;
-                item.quantity = 0; // Reset quantity after order
+                item.quantity = 0;
             }
         });
     }
@@ -298,7 +300,7 @@ function placeOrder() {
     updateOrders();
     toggleModal('cart-modal');
     showNotification('Your order has been placed successfully!', 'success');
-    loadAllContent(); // Refresh all menu items
+    loadAllContent();
 }
 
 function updateOrders() {
@@ -352,11 +354,10 @@ function toggleModal(modalId) {
 function showNotification(message, type = 'success') {
     const notification = document.getElementById('notification');
     notification.textContent = message;
-    notification.className = 'notification'; // Reset class
+    notification.className = 'notification';
     notification.classList.add(`notification-${type}`);
     notification.style.display = 'block';
     
-    // Hide the notification after 3 seconds
     setTimeout(() => {
         notification.style.display = 'none';
     }, 3000);
@@ -395,12 +396,27 @@ function toggleCategoryList() {
     }
 }
 
-// Add this new function to close the category list when clicking outside
 function setupOverlayListeners() {
     const overlay = document.getElementById('overlay');
     overlay.addEventListener('click', (event) => {
         if (event.target === overlay) {
             toggleCategoryList();
+        }
+    });
+}
+
+function handleFilter(filter) {
+    currentFilter = filter;
+    updateFilterButtons();
+    loadAllContent();
+}
+
+function updateFilterButtons() {
+    const buttons = document.querySelectorAll('.filter-btn');
+    buttons.forEach(button => {
+        button.classList.remove('active');
+        if (button.id === `${currentFilter}-filter-btn`) {
+            button.classList.add('active');
         }
     });
 }
