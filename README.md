@@ -18,7 +18,7 @@ This project is a single-page web application for a restaurant menu. It allows u
 
 - HTML5
 - CSS3
-- JavaScript (ES6+)
+- JavaScript
 
 ## Installation
 
