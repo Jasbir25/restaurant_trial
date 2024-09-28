@@ -24,11 +24,11 @@ This project is a single-page web application for a restaurant menu. It allows u
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/restaurant-menu-spa.git
+   git clone https://github.com/Jasbir25/restaurant_trial.git
    ```
 2. Navigate to the project directory:
    ```
-   cd restaurant-menu-spa
+   cd restaurant_trial
    ```
 3. Open `index.html` in your web browser.
 
