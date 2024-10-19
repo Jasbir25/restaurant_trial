@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Menu and Order Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="center-align">Admin Panel</h1>
+    </header>
+
+    <div class="container">
+        <section id="menu-management">
+            <h2>Menu Management</h2>
+            <form id="menu-form">
+                <input type="text" id="item-name" placeholder="Item Name" required>
+                <input type="number" id="item-price" placeholder="Price" required>
+                <input type="text" id="item-description" placeholder="Description" required>
+                <input type="file" id="item-image" accept="image/*">
+                <select id="item-category">
+                    <option value="Today\'s Specials">Today's Specials</option>
+                    <option value="Starters">Starters</option>
+                    <option value="Main Course">Main Course</option>
+                    <option value="Beverages">Beverages</option>
+                    <option value="Dessert">Dessert</option>
+                </select>
+                <label>
+                    <input type="checkbox" id="item-veg"> Vegetarian
+                </label>
+                <button type="submit">Add Menu Item</button>
+            </form>
+            <div id="menu-list"></div>
+        </section>
+
+        <section id="order-management">
+            <h2>Order Management</h2>
+            <div id="order-list"></div>
+        </section>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
